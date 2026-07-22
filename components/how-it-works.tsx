@@ -22,7 +22,7 @@ const MOVES = [
     title: "Accredian fans it out.",
     detail:
       "The brief is translated cohort-by-cohort with role-correct mapping. Pacing and content mix follow the rules you set, automatically.",
-    image: "/images/how-it-works-photo1.jpeg",
+    image: "/images/how-it-works1.jpeg",
     caption: "Automated distribution shapes the learning flow for every cohort.",
   },
   {
@@ -31,7 +31,7 @@ const MOVES = [
     title: "One place to watch it land.",
     detail:
       "Completion, engagement and skill-impact reconcile into a single view — no tab per cohort, no spreadsheet reconciliation.",
-    image: "/images/how-it-works-photo2.jpeg",
+    image: "/images/how-it-works2.jpeg",
     caption: "Visibility across completion, engagement and skill impact in one dashboard.",
   },
 ] as const;
