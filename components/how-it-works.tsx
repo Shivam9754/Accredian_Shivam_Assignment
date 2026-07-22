@@ -22,7 +22,7 @@ const MOVES = [
     title: "Accredian fans it out.",
     detail:
       "The brief is translated cohort-by-cohort with role-correct mapping. Pacing and content mix follow the rules you set, automatically.",
-    image: "/images/how-it-works1.jpeg",
+    image: "/images/1.jpeg",
     caption: "Automated distribution shapes the learning flow for every cohort.",
   },
   {
