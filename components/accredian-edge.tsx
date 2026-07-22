@@ -1,3 +1,4 @@
+// components/accredian-edge.tsx
 "use client";
 
 import { useState } from "react";
@@ -54,7 +55,63 @@ export function AccredianEdge() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 lg:grid-cols-[1fr_100px_1fr]">
+        {/* ========================================================= */}
+        {/* MOBILE VIEW (Grouped Cards - Responsive layout)            */}
+        {/* ========================================================= */}
+        <div className="lg:hidden space-y-6">
+          {/* Traditional Path Card */}
+          <div className="rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-50/30 dark:bg-neutral-900/5 p-6">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-400">
+              Traditional Path
+            </span>
+            <h3 className="text-xl font-bold mt-1 mb-6 text-neutral-400 font-mono">
+              Standard Corporate Upskilling
+            </h3>
+            <ul className="space-y-4">
+              {ROWS.map((row) => (
+                <li key={row.standard} className="flex items-start gap-3 text-sm text-neutral-500 dark:text-neutral-400 font-mono">
+                  <span className="mt-0.5 text-neutral-300 dark:text-neutral-700 font-bold">✕</span>
+                  <span>{row.standard}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* The Accredian Edge Card */}
+          <div className="rounded-lg border border-accent/20 bg-accent/[0.01] dark:bg-accent/[0.02] p-6 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-full blur-2xl pointer-events-none" />
+            
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-accent">
+                Strategic Path
+              </span>
+              <span className="text-[9px] uppercase font-mono px-1.5 py-0.5 rounded border border-accent/30 text-accent bg-accent/5">
+                Recommended
+              </span>
+            </div>
+            <h3 className="text-xl font-bold mt-1 mb-6 text-neutral-900 dark:text-white font-mono">
+              The Accredian Edge
+            </h3>
+            <ul className="space-y-6">
+              {ROWS.map((row) => (
+                <li key={row.edge} className="flex flex-col gap-1 text-sm text-neutral-900 dark:text-white font-mono">
+                  <div className="flex items-start gap-3">
+                    <span className="mt-0.5 text-accent font-bold">✓</span>
+                    <span className="font-semibold">{row.edge}</span>
+                  </div>
+                  <p className="pl-6 text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed font-sans">
+                    {row.detail}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* ========================================================= */}
+        {/* DESKTOP VIEW (Original Interactive Stepper Table)        */}
+        {/* ========================================================= */}
+        <div className="hidden lg:grid overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 lg:grid-cols-[1fr_100px_1fr]">
           {/* left column header */}
           <div className="border-b border-neutral-200 p-5 lg:border-b-0 lg:border-r dark:border-neutral-800">
             <span className="text-xs font-medium uppercase tracking-wide text-neutral-400">
@@ -94,7 +151,7 @@ export function AccredianEdge() {
                   {row.standard}
                 </div>
 
-                {/* Center Connector: Continuous Vertical Timeline Stepper (Screenshot 2 style) */}
+                {/* Center Connector: Continuous Vertical Timeline Stepper */}
                 <div
                   onMouseEnter={() => setHovered(i)}
                   onMouseLeave={() => setHovered(null)}

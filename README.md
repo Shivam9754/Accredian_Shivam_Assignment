@@ -7,8 +7,8 @@ I built a responsive landing page using **Next.js (App Router)** and **Tailwind 
 ---
 
 ## 🔗 Live Links
-*   **Live Deployed Link (Vercel):** [PASTE YOUR LIVE VERCEL LINK HERE]
-*   **GitHub Repository:** [PASTE YOUR GITHUB REPO LINK HERE]
+*   **Live Deployed Link (Vercel): https://accredian-shivam-assignment-zeta.vercel.app/
+*   **GitHub Repository: https://github.com/Shivam9754/Accredian_Shivam_Assignment
 
 ---
 
@@ -18,7 +18,7 @@ To run this on your PC, make sure you have Node.js installed, then follow these 
 
 1. **Clone the project:**
    ```bash
-   git clone [PASTE YOUR GITHUB REPO LINK HERE]
+   git clone https://github.com/Shivam9754/Accredian_Shivam_Assignment
    cd Accredian_Shivam_Assignment
    ```
 
